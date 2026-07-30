@@ -14,3 +14,587 @@
   --tab-h:    40px;
   --nav-h:    44px;
 }
+
+html,body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Share Tech Mono',monospace;
+  font-size:13px;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ── DOTTED GRID BACKGROUND (exact game texture) ── */
+body{
+  background-image:
+    radial-gradient(circle, rgba(42,32,24,.18) 1px, transparent 1px);
+  background-size:14px 14px;
+  background-color:var(--bg);
+}
+
+/* ── FILM GRAIN ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;z-index:9998;
+  pointer-events:none;
+  opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size:160px;
+  animation:grain .35s steps(1) infinite;
+}
+@keyframes grain{
+  0%{background-position:0 0}25%{background-position:-30px 15px}
+  50%{background-position:15px -20px}75%{background-position:-15px 30px}
+}
+
+/* ══════════════════════════════════════
+   TOP NAV BAR — exact game tab strip
+══════════════════════════════════════ */
+.top-nav{
+  position:sticky;top:0;z-index:200;
+  background:var(--accent);
+  border-bottom:2px solid var(--border2);
+  display:flex;align-items:stretch;
+  height:var(--nav-h);
+  user-select:none;
+}
+.nav-logo-box{
+  display:flex;align-items:center;
+  padding:0 16px;
+  border-right:1px solid var(--border2);
+  flex-shrink:0;
+  gap:8px;
+}
+.nav-logo-box img{
+  width:22px;height:22px;
+  filter:brightness(0) invert(1);
+  opacity:.8;
+}
+.nav-logo-text{
+  font-family:'Rajdhani',sans-serif;
+  font-size:13px;font-weight:700;
+  letter-spacing:4px;
+  color:var(--cream);
+  text-transform:uppercase;
+  opacity:.9;
+}
+.nav-tabs{
+  display:flex;align-items:stretch;
+  flex:1;
+}
+.nav-tab{
+  display:flex;align-items:center;
+  padding:0 20px;gap:7px;
+  border-right:1px solid rgba(255,255,255,.1);
+  font-size:11px;letter-spacing:3px;
+  color:rgba(240,236,224,.55);
+  text-transform:uppercase;
+  cursor:pointer;
+  text-decoration:none;
+  transition:background .15s,color .15s;
+  position:relative;
+}
+.nav-tab:hover{
+  background:rgba(255,255,255,.07);
+  color:rgba(240,236,224,.85);
+}
+.nav-tab.active{
+  background:var(--bg);
+  color:var(--text);
+  border-bottom:2px solid var(--selected);
+}
+.nav-tab.active::after{
+  content:'';
+  position:absolute;bottom:-2px;left:0;right:0;
+  height:2px;background:var(--selected);
+}
+.tab-icon{
+  font-size:9px;opacity:.7;
+}
+.nav-sys{
+  margin-left:auto;
+  display:flex;align-items:center;
+  padding:0 14px;
+  font-size:9px;letter-spacing:3px;
+  color:rgba(240,236,224,.4);
+  border-left:1px solid rgba(255,255,255,.1);
+  gap:14px;
+  flex-shrink:0;
+}
+.status-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--selected);
+  box-shadow:0 0 5px var(--selected);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+
+/* ══════════════════════════════════════
+   SECTION HEADER (like "ITEM — 強化")
+══════════════════════════════════════ */
+.sec-header{
+  padding:20px 32px 0;
+  display:flex;align-items:baseline;
+  gap:14px;
+}
+.sec-title{
+  font-family:'Rajdhani',sans-serif;
+  font-size:28px;font-weight:300;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  color:var(--text);
+}
+.sec-sub{
+  font-size:11px;letter-spacing:3px;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+.sec-rule{
+  margin:10px 32px 0;
+  height:1px;
+  background:linear-gradient(90deg,var(--border),transparent);
+}
+
+/* ══════════════════════════════════════
+   MAIN LAYOUT — 3 panel like game UI
+══════════════════════════════════════ */
+.main-layout{
+  display:grid;
+  grid-template-columns:220px 1fr 260px;
+  gap:12px;
+  padding:16px 20px 20px;
+  max-width:1300px;
+  margin:0 auto;
+}
+
+/* ── PANEL (bordered box like in-game) ── */
+.panel{
+  background:var(--panel);
+  border:1px solid var(--border);
+  position:relative;
+}
+.panel::before{
+  content:'';
+  position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(circle, rgba(42,32,24,.08) 1px, transparent 1px);
+  background-size:10px 10px;
+}
+.panel-inner{position:relative;z-index:1;}
+
+/* ── LEFT LIST PANEL ── */
+.list-panel{
+  display:flex;flex-direction:column;
+}
+.list-panel .panel-inner{flex:1;overflow-y:auto;}
+
+.list-item{
+  display:flex;align-items:center;
+  gap:8px;
+  padding:9px 12px;
+  border-bottom:1px solid rgba(138,127,98,.25);
+  cursor:pointer;
+  transition:background .1s;
+  text-decoration:none;
+  color:var(--text);
+  position:relative;
+}
+.list-item:hover{background:rgba(200,184,122,.3);}
+.list-item.active{
+  background:var(--selected);
+  color:var(--accent);
+}
+.list-item.active::before{
+  content:'◆';
+  font-size:7px;
+  color:var(--accent);
+  margin-right:2px;
+}
+.list-icon{
+  font-size:10px;color:var(--muted);
+  flex-shrink:0;
+}
+.list-icon.active-i{color:var(--accent);}
+.list-name{
+  font-size:11px;letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.list-val{
+  margin-left:auto;
+  font-size:10px;color:var(--muted);
+}
+
+/* list section header */
+.list-section-hdr{
+  padding:6px 12px;
+  background:var(--border);
+  font-size:9px;letter-spacing:4px;
+  color:var(--cream);
+  text-transform:uppercase;
+}
+
+/* ── CENTRE PANEL ── */
+.centre-panel{display:flex;flex-direction:column;gap:12px;}
+
+/* big image box */
+.img-box{
+  background:var(--panel2);
+  border:1px solid var(--border);
+  position:relative;
+  overflow:hidden;
+}
+.img-box::before{
+  content:'';
+  position:absolute;inset:0;pointer-events:none;z-index:2;
+  background-image:radial-gradient(circle,rgba(42,32,24,.07) 1px,transparent 1px);
+  background-size:10px 10px;
+}
+.img-box img{
+  width:100%;
+  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:top center;
+  filter:contrast(1.05) saturate(.85) brightness(.96);
+  transition:filter .4s;
+  position:relative;z-index:1;
+}
+.img-box:hover img{
+  filter:contrast(1.05) saturate(1) brightness(1);
+}
+
+/* image caption bar */
+.img-cap{
+  padding:8px 12px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:space-between;
+  position:relative;z-index:3;
+}
+.img-cap-name{
+  font-family:'Rajdhani',sans-serif;
+  font-size:16px;font-weight:600;letter-spacing:4px;
+  color:var(--cream);text-transform:uppercase;
+}
+.img-cap-sub{
+  font-size:9px;letter-spacing:3px;color:rgba(240,236,224,.55);
+}
+
+/* desc text box */
+.desc-box{
+  border:1px solid var(--border);
+  background:var(--panel);
+  padding:14px;
+  position:relative;
+}
+.desc-box::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(42,32,24,.07) 1px,transparent 1px);
+  background-size:10px 10px;
+}
+.desc-text{
+  font-size:11px;line-height:1.9;
+  color:var(--muted);
+  position:relative;z-index:1;
+  letter-spacing:.5px;
+}
+
+/* ── RIGHT STATS PANEL ── */
+.stats-panel{}
+
+.stats-hdr{
+  background:var(--border);
+  padding:6px 12px;
+  font-size:11px;letter-spacing:3px;
+  color:var(--cream);
+  text-transform:uppercase;
+  position:relative;z-index:1;
+}
+.stats-body{
+  padding:0;
+  position:relative;z-index:1;
+}
+.stat-row{
+  display:flex;justify-content:space-between;
+  align-items:center;
+  padding:8px 12px;
+  border-bottom:1px solid rgba(138,127,98,.22);
+  font-size:11px;
+}
+.stat-row:last-child{border-bottom:none;}
+.stat-key{color:var(--muted);letter-spacing:1px;}
+.stat-val{
+  color:var(--text);
+  font-family:'Rajdhani',sans-serif;
+  font-size:14px;font-weight:600;letter-spacing:2px;
+}
+
+/* HP bar */
+.hp-bar{
+  flex:1;margin:0 10px;
+  height:4px;background:rgba(42,32,24,.2);
+  position:relative;
+  max-width:80px;
+}
+.hp-fill{
+  height:100%;background:var(--border2);
+  transition:width .4s;
+}
+
+/* stat divider */
+.stat-divider{
+  padding:4px 12px;
+  background:rgba(138,127,98,.12);
+  font-size:8px;letter-spacing:4px;
+  color:var(--border2);text-transform:uppercase;
+}
+
+/* NO ERROR box */
+.no-error{
+  margin:10px 12px;
+  border:1px solid rgba(138,127,98,.35);
+  padding:8px 12px;
+  text-align:center;
+  font-size:9px;letter-spacing:4px;
+  color:var(--muted);
+  background:rgba(240,236,224,.12);
+  position:relative;z-index:1;
+}
+
+/* ══════════════════════════════════════
+   GALLERY SECTION
+══════════════════════════════════════ */
+#gallery{padding-top:24px;}
+
+/* Masonry-style 4-column gallery */
+.gallery-outer{
+  padding:16px 20px 20px;
+  max-width:1300px;margin:0 auto;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:auto;
+  gap:2px;
+}
+
+/* big feature cards span */
+.g-feature{grid-column:span 2;grid-row:span 2;}
+.g-tall{grid-row:span 2;}
+.g-wide{grid-column:span 2;}
+
+.g-card{
+  background:var(--panel2);
+  border:1px solid var(--border);
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  display:flex;flex-direction:column;
+}
+.g-card img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:top center;
+  display:block;
+  min-height:140px;
+  filter:contrast(1.05) saturate(.7) brightness(.88);
+  transition:filter .5s, transform .5s;
+  flex:1;
+}
+.g-card:hover img{
+  filter:contrast(1.05) saturate(.95) brightness(1);
+  transform:scale(1.03);
+}
+
+/* corner brackets (game UI style) */
+.g-card::before,.g-card::after{
+  content:'';
+  position:absolute;
+  width:12px;height:12px;
+  border-color:var(--selected);
+  border-style:solid;
+  z-index:3;
+  opacity:0;
+  transition:opacity .25s;
+}
+.g-card::before{top:6px;left:6px;border-width:1px 0 0 1px;}
+.g-card::after{bottom:6px;right:6px;border-width:0 1px 1px 0;}
+.g-card:hover::before,.g-card:hover::after{opacity:1;}
+
+.g-overlay{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(0deg,rgba(42,32,24,.88) 0%,transparent 100%);
+  padding:20px 10px 8px;
+  z-index:2;
+  transform:translateY(4px);
+  transition:transform .25s;
+}
+.g-card:hover .g-overlay{transform:translateY(0);}
+
+.g-label{
+  font-family:'Rajdhani',sans-serif;
+  font-size:12px;font-weight:600;
+  letter-spacing:3px;
+  color:var(--cream);
+  text-transform:uppercase;
+  display:block;
+}
+.g-sublabel{
+  font-size:8px;letter-spacing:3px;
+  color:rgba(240,236,224,.5);
+  text-transform:uppercase;
+  display:block;
+  margin-top:2px;
+}
+
+/* ── LIGHTBOX ── */
+#lb{
+  display:none;position:fixed;inset:0;z-index:5000;
+  background:rgba(10,8,5,.9);
+  align-items:center;justify-content:center;
+  backdrop-filter:blur(6px);
+}
+#lb.on{display:flex;}
+#lb-img{
+  max-width:88vw;max-height:86vh;
+  border:1px solid var(--border);
+  display:block;
+}
+#lb-close{
+  position:absolute;top:20px;right:28px;
+  font-size:11px;letter-spacing:4px;
+  color:var(--muted);cursor:pointer;
+  text-transform:uppercase;
+  transition:color .2s;
+}
+#lb-close:hover{color:var(--cream);}
+
+/* ══════════════════════════════════════
+   LORE / DATA TABLE SECTION
+══════════════════════════════════════ */
+#lore{padding-top:24px;}
+.data-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  padding:16px 20px 20px;
+  max-width:1300px;margin:0 auto;
+}
+
+.data-table{
+  border-collapse:collapse;
+  width:100%;
+  position:relative;z-index:1;
+}
+.data-table thead tr{
+  background:var(--border);
+}
+.data-table th{
+  padding:8px 12px;
+  text-align:left;
+  font-size:9px;letter-spacing:4px;
+  color:var(--cream);font-weight:400;
+  text-transform:uppercase;
+}
+.data-table td{
+  padding:8px 12px;
+  border-bottom:1px solid rgba(138,127,98,.22);
+  font-size:11px;color:var(--muted);
+  vertical-align:middle;letter-spacing:.5px;
+}
+.data-table tr:hover td{
+  background:rgba(200,184,122,.2);
+  color:var(--text);
+}
+.data-table tr.highlighted td{
+  background:rgba(200,184,122,.3);
+  color:var(--text);
+}
+.unit-thumb{
+  width:42px;height:42px;
+  object-fit:cover;object-position:top;
+  filter:saturate(.5) brightness(.85);
+  border:1px solid var(--border);
+  display:block;
+}
+.status-tag{
+  display:inline-block;
+  font-size:8px;letter-spacing:2px;
+  padding:2px 8px;
+  border:1px solid;
+  text-transform:uppercase;
+}
+.status-tag.active{border-color:var(--border2);color:var(--text);}
+.status-tag.rogue{border-color:rgba(122,26,16,.5);color:var(--red);}
+.status-tag.classified{border-color:rgba(106,96,80,.35);color:var(--muted);}
+
+/* lore text card */
+.lore-card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  position:relative;
+}
+.lore-card::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(42,32,24,.07) 1px,transparent 1px);
+  background-size:10px 10px;
+}
+.lore-card-inner{position:relative;z-index:1;padding:16px;}
+.lore-card-inner p{
+  font-family:'Rajdhani',sans-serif;
+  font-size:14px;font-weight:400;
+  color:var(--muted);
+  line-height:1.9;letter-spacing:.5px;
+  margin-bottom:14px;
+}
+.lore-quote{
+  font-size:12px;
+  font-style:italic;
+  color:var(--muted);
+  border-left:2px solid var(--border);
+  padding-left:12px;
+  letter-spacing:.5px;
+  line-height:1.8;
+  opacity:.8;
+}
+
+/* ══════════════════════════════════════
+   BOTTOM STATUS BAR (game UI)
+══════════════════════════════════════ */
+.status-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:300;
+  background:var(--accent);
+  border-top:1px solid var(--border2);
+  height:36px;
+  display:flex;align-items:center;
+  padding:0 24px;
+  gap:28px;
+}
+.sb-item{
+  font-size:9px;letter-spacing:3px;color:rgba(240,236,224,.45);
+  text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;
+}
+.sb-key{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:16px;height:16px;
+  border:1px solid rgba(240,236,224,.25);
+  font-size:8px;color:rgba(240,236,224,.5);
+  border-radius:2px;
+}
+.sb-right{margin-left:auto;font-size:8px;letter-spacing:4px;color:rgba(240,236,224,.3);}
+
+/* spacer for fixed bottom bar */
+.bottom-spacer{height:50px;}
+
+/* ══════════════════════════════════════
+   RESPONSIVE HELPERS
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .main-layout{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .g-feature{grid-column:span 2;}
+  .g-tall,.g-wide{grid-column:span 1;grid-row:span 1;}
+  .data-layout{grid-template-columns:1fr;}
+  .top-nav .nav-tab span{display:none;}
+}
