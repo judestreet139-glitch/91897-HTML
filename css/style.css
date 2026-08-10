@@ -63,6 +63,7 @@ h1 small {
   letter-spacing: var(--letter-spacing);
 }
 
+/* Below - Pattern Taken From https://codepen.io/chriscoyier/pen/gbvJxY */
 .pattern {
   border-top: 2px solid var(--pattern);
 }
