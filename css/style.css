@@ -7,14 +7,14 @@ top-nav {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: left;
+  align-items: flex-start;
   background-color: #ddd6bc;
-  border: #8a7f62;
+  border: 1px solid var(--border);
   color: white;
   padding: 10px;
 }
 
-:root{
+:root {
   --bg:       #c8c0a4;
   --panel:    #d4ccb0;
   --panel2:   #ddd6bc;
@@ -29,11 +29,120 @@ nav {
   --red:      #7a1a10;
   --tab-h:    40px;
   --nav-h:    44px;
+  --pattern:  #8a7f62;
+  --pattern-rgb: 138, 127, 98;
+  --letter-spacing: 0.1rem;
 }
 
-body{
+body {
   background-image:
     radial-gradient(circle, rgba(42,32,24,.18) 1px, transparent 1px);
-  background-size:14px 14px;
-  background-color:var(--bg);
+  background-size: 14px 14px;
+  background-color: var(--bg);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: .7rem;
+  text-shadow: .3rem .3rem 0 rgba(77, 73, 62,.3);
+}
+
+h1 span {
+  margin-right: -.7rem;
+}
+
+h1 small::before {
+  content: "–";
+}
+
+h1 small {
+  font-weight: 500;
+  text-transform: none;
+  text-shadow: none;
+  letter-spacing: var(--letter-spacing);
+}
+
+.pattern {
+  border-top: 2px solid var(--pattern);
+}
+
+.pattern-inner {
+  height: 40px;
+  background-size: 50px 3px,
+    50px 1px, 50px 1px, 50px 1px, 50px 1px,
+    50px 1px, 50px 1px, 50px 1px, 50px 1px;
+  background-position: 0 0,
+    22px 4px, 22px 5px, 22px 6px, 22px 7px,
+    28px 12px, 28px 13px, 28px 14px, 28px 15px;
+  background-image: linear-gradient(90deg, var(--pattern), var(--pattern) 10px, transparent 10px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .4), rgba(var(--pattern-rgb), .4) 1px,
+      rgba(var(--pattern-rgb), .8) 1px, rgba(var(--pattern-rgb), .8) 2px,
+      rgba(var(--pattern-rgb), .9) 2px, rgba(var(--pattern-rgb), .9) 3px,
+      rgba(var(--pattern-rgb), .4) 3px, rgba(var(--pattern-rgb), .4) 4px,
+      transparent 4px, transparent 12px,
+      rgba(var(--pattern-rgb), .4) 12px, rgba(var(--pattern-rgb), .4) 13px,
+      rgba(var(--pattern-rgb), .8) 13px, rgba(var(--pattern-rgb), .8) 14px,
+      rgba(var(--pattern-rgb), .9) 14px, rgba(var(--pattern-rgb), .9) 15px,
+      rgba(var(--pattern-rgb), .4) 15px, rgba(var(--pattern-rgb), .4) 16px,
+      transparent 16px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .9), rgba(var(--pattern-rgb), .9) 1px,
+      rgba(var(--pattern-rgb), 1) 1px, rgba(var(--pattern-rgb), 1) 2px,
+      rgba(var(--pattern-rgb), 1) 2px, rgba(var(--pattern-rgb), 1) 3px,
+      rgba(var(--pattern-rgb), .9) 3px, rgba(var(--pattern-rgb), .9) 4px,
+      transparent 4px, transparent 12px,
+      rgba(var(--pattern-rgb), .9) 12px, rgba(var(--pattern-rgb), .9) 13px,
+      rgba(var(--pattern-rgb), 1) 13px, rgba(var(--pattern-rgb), 1) 14px,
+      rgba(var(--pattern-rgb), 1) 14px, rgba(var(--pattern-rgb), 1) 15px,
+      rgba(var(--pattern-rgb), .9) 15px, rgba(var(--pattern-rgb), .9) 16px,
+      transparent 16px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .9), rgba(var(--pattern-rgb), .9) 1px,
+      rgba(var(--pattern-rgb), 1) 1px, rgba(var(--pattern-rgb), 1) 2px,
+      rgba(var(--pattern-rgb), 1) 2px, rgba(var(--pattern-rgb), 1) 3px,
+      rgba(var(--pattern-rgb), .9) 3px, rgba(var(--pattern-rgb), .9) 4px,
+      transparent 4px, transparent 12px,
+      rgba(var(--pattern-rgb), .9) 12px, rgba(var(--pattern-rgb), .9) 13px,
+      rgba(var(--pattern-rgb), 1) 13px, rgba(var(--pattern-rgb), 1) 14px,
+      rgba(var(--pattern-rgb), 1) 14px, rgba(var(--pattern-rgb), 1) 15px,
+      rgba(var(--pattern-rgb), .9) 15px, rgba(var(--pattern-rgb), .9) 16px,
+      transparent 16px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .4), rgba(var(--pattern-rgb), .4) 1px,
+      rgba(var(--pattern-rgb), .8) 1px, rgba(var(--pattern-rgb), .8) 2px,
+      rgba(var(--pattern-rgb), .9) 2px, rgba(var(--pattern-rgb), .9) 3px,
+      rgba(var(--pattern-rgb), .4) 3px, rgba(var(--pattern-rgb), .4) 4px,
+      transparent 4px, transparent 12px,
+      rgba(var(--pattern-rgb), .4) 12px, rgba(var(--pattern-rgb), .4) 13px,
+      rgba(var(--pattern-rgb), .8) 13px, rgba(var(--pattern-rgb), .8) 14px,
+      rgba(var(--pattern-rgb), .9) 14px, rgba(var(--pattern-rgb), .9) 15px,
+      rgba(var(--pattern-rgb), .4) 15px, rgba(var(--pattern-rgb), .4) 16px,
+      transparent 16px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .4), rgba(var(--pattern-rgb), .4) 1px,
+      rgba(var(--pattern-rgb), .8) 1px, rgba(var(--pattern-rgb), .8) 2px,
+      rgba(var(--pattern-rgb), .9) 2px, rgba(var(--pattern-rgb), .9) 3px,
+      rgba(var(--pattern-rgb), .4) 3px, rgba(var(--pattern-rgb), .4) 4px,
+      transparent 4px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .9), rgba(var(--pattern-rgb), .9) 1px,
+      rgba(var(--pattern-rgb), 1) 1px, rgba(var(--pattern-rgb), 1) 2px,
+      rgba(var(--pattern-rgb), 1) 2px, rgba(var(--pattern-rgb), 1) 3px,
+      rgba(var(--pattern-rgb), .9) 3px, rgba(var(--pattern-rgb), .9) 4px,
+      transparent 4px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .9), rgba(var(--pattern-rgb), .9) 1px,
+      rgba(var(--pattern-rgb), 1) 1px, rgba(var(--pattern-rgb), 1) 2px,
+      rgba(var(--pattern-rgb), 1) 2px, rgba(var(--pattern-rgb), 1) 3px,
+      rgba(var(--pattern-rgb), .9) 3px, rgba(var(--pattern-rgb), .9) 4px,
+      transparent 4px),
+    linear-gradient(90deg,
+      rgba(var(--pattern-rgb), .4), rgba(var(--pattern-rgb), .4) 1px,
+      rgba(var(--pattern-rgb), .8) 1px, rgba(var(--pattern-rgb), .8) 2px,
+      rgba(var(--pattern-rgb), .9) 2px, rgba(var(--pattern-rgb), .9) 3px,
+      rgba(var(--pattern-rgb), .4) 3px, rgba(var(--pattern-rgb), .4) 4px,
+      transparent 4px);
+  background-repeat: repeat-x;
 }
