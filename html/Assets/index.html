@@ -1,164 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="/css/style.css">
-<head>
-  <div class="pattern">
-  <div class="container">
-    <div class="pattern-inner"></div>
-  </div>
-</div>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>DrakenNieR</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DrakenNieR</title>
+  </head>
+  <body>
     <nav class="top-nav">
-  <div class="nav-logo-box">
-    <div class="nav-logo-text">NieR</div>
-  </div> 
-  <div class="nav-tabs">
-    <a href="#characters" class="nav-tab active">
-      <span class="tab-icon">◈</span><span>Characters</span>
-    </a>
-    <a href="#gallery" class="nav-tab">
-      <span class="tab-icon">◈</span><span>Gallery</span>
-    </a>
-    <a href="#lore" class="nav-tab">
-      <span class="tab-icon">◈</span><span>Intel</span>
-    </a>
-    <a href="#units" class="nav-tab">
-      <span class="tab-icon">◈</span><span>YoRHa Units</span>
-    </a>
-  </div>
-  <div class="nav-sys">
-    <div class="status-dot"></div>
-  </div>
-</nav>
+      <div class="nav-logo-box">
+        <div class="nav-logo-text">NieR</div>
+      </div>
+      <div class="nav-tabs">
+        <a href="#characters" class="nav-tab active">
+          <span class="tab-icon">◈</span><span>Characters</span>
+        </a>
+        <a href="#gallery" class="nav-tab">
+          <span class="tab-icon">◈</span><span>Gallery</span>
+        </a>
+        <a href="#lore" class="nav-tab">
+          <span class="tab-icon">◈</span><span>Intel</span>
+        </a>
+        <a href="#units" class="nav-tab">
+          <span class="tab-icon">◈</span><span>YoRHa Units</span>
+        </a>
+      </div>
+      <div class="nav-sys">
+        <div class="status-dot"></div>
+      </div>
+    </nav>
 
-<div id="characters">
-  <div class="sec-header">
-    <div class="sec-title">Characters</div>
-    <div class="sec-sub">— YoRHa Combat Registry</div>
-  </div>
-  <div class="sec-rule"></div>
+    <div id="characters">
+      <div class="sec-header">
+        <div class="sec-title">Characters</div>
+        <div class="sec-sub">— YoRHa</div>
+      </div>
+      <div class="sec-rule"></div>
 
-  <div class="main-layout"> 
-    <div class="list-panel panel">
-      <div class="panel-inner">
-        <div class="list-section-hdr">Active Units</div>
-        <a href="#" class="list-item active" onclick="showChar('2b');return false;">
-          <span class="list-icon active-i">◆</span>
-          <span class="list-name">YoRHa No.2 Type B</span>
-          <span class="list-val">Lv.1</span>
-        </a>
-        <a href="#" class="list-item" onclick="showChar('9s');return false;">
-          <span class="list-icon">◇</span>
-          <span class="list-name">YoRHa No.9 Type S</span>
-          <span class="list-val">Lv.1</span>
-        </a>
-        <a href="#" class="list-item" onclick="showChar('a2');return false;">
-          <span class="list-icon">◇</span>
-          <span class="list-name">YoRHa Type A No.2</span>
-          <span class="list-val">—</span>
-        </a>
-        <div class="list-section-hdr" style="margin-top:2px">Support</div>
-        <a href="#" class="list-item" onclick="showChar('cmd');return false;">
-          <span class="list-icon">◇</span>
-          <span class="list-name">Commander White</span>
-          <span class="list-val">—</span>
-        </a>
-        <a href="#" class="list-item" onclick="showChar('pod');return false;">
-          <span class="list-icon">◇</span>
-          <span class="list-name">Pod 042 / Pod 153</span>
-          <span class="list-val">—</span>
-        </a>
-        <div class="list-section-hdr" style="margin-top:2px">Antagonists</div>
-        <a href="#" class="list-item" onclick="showChar('adam');return false;">
-          <span class="list-icon">◇</span>
-          <span class="list-name">Adam</span>
-          <span class="list-val">—</span>
-        </a>
-        <a href="#" class="list-item" onclick="showChar('eve');return false;">
-          <span class="list-icon">◇</span>
-          <span class="list-name">Eve</span>
-          <span class="list-val">—</span>
-        </a>
+      <div class="main-layout">
+        <div class="list-panel panel">
+          <div class="panel-inner">
+            <div class="list-section-hdr">Active Units</div>
+            <a href="#" class="list-item active" onclick="showChar('2b');return false;">
+              <span class="list-icon active-i">◆</span>
+              <span class="list-name">YoRHa No.2 Type B</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('9s');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">YoRHa No.9 Type S</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('a2');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">YoRHa Type A No.2</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Support</div>
+            <a href="#" class="list-item" onclick="showChar('cmd');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Commander White</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('pod');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Pod 042 / Pod 153</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Antagonists</div>
+            <a href="#" class="list-item" onclick="showChar('adam');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Adam</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('eve');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Eve</span>
+              <span class="list-val">—</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="centre-panel">
+          <div class="img-box" id="char-img-box">
+            <img id="char-img" src="./2b.png" alt="2B"/>
+            <div class="img-cap">
+              <span class="img-cap-name" id="char-fullname">YoRHa No.2 Type B</span>
+              <span class="img-cap-sub" id="char-designation">2B — Battle Android</span>
+            </div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-text" id="char-desc">bla bla bla nier nier nier nier</div>
+          </div>
+        </div>
+
+        <div class="stats-panel panel">
+          <div class="stats-hdr" id="stats-hdr">2B Base Stats (Lvl 1)</div>
+          <div class="stats-body">
+            <div class="stat-row">
+              <span class="stat-key">Unit</span>
+              <span class="stat-val" id="s-unit">2B</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Type</span>
+              <span class="stat-val" id="s-type">Battle</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Lv</span>
+              <span class="stat-val">1</span>
+            </div>
+            <div class="stat-divider">Combat Parameters</div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Light)</span>
+              <span class="stat-val" id="s-atk1">665</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Heavy)</span>
+              <span class="stat-val" id="s-atk2">815</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Pod DMG</span>
+              <span class="stat-val" id="s-pod">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">DEF</span>
+              <span class="stat-val" id="s-def">100</span>
+            </div>
+            <div class="stat-divider">System Status</div>
+            <div class="stat-row hp-row">
+              <span class="stat-key">HP</span>
+              <div class="hp-bar"><div class="hp-fill" style="width:100%"></div></div>
+              <span class="stat-val" id="s-hp">800/800</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Gold</span>
+              <span class="stat-val" id="s-gold">1,000</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">EXP</span>
+              <span class="stat-val" id="s-exp">0</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="centre-panel">
-      <div class="img-box" id="char-img-box">
-        <img id="char-img"
-          src="/html/Assets/2b.png" alt="2B"/>   
-        <div class="img-cap">
-          <span class="img-cap-name" id="char-fullname">YoRHa No.2 Type B</span>
-          <span class="img-cap-sub" id="char-designation">2B — Battle Android</span>
-        </div>
+    <div id="gallery">
+      <div class="sec-header">
+        <div class="sec-title">Gallery</div>
+        <div class="sec-sub">— YorHa</div>
       </div>
-      <div class="desc-box">
-        <div class="desc-text" id="char-desc">
-bla bla bla nier nier nier nier
-        </div>
-      </div>
+      <div class="sec-rule"></div>
+      <div class="gallery-grid"></div>
     </div>
 
-    <div class="stats-panel panel">
-      <div class="stats-hdr" id="stats-hdr">2b Status</div>
-      <div class="stats-body">
-        <div class="stat-row">
-          <span class="stat-key">Unit</span>
-          <span class="stat-val" id="s-unit">2B</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">Type</span>
-          <span class="stat-val" id="s-type">Battle</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">Lv</span>
-          <span class="stat-val">1</span>
-        </div>
-        <div class="stat-divider">Combat Parameters</div>
-        <div class="stat-row">
-          <span class="stat-key">ATK (Light)</span>
-          <span class="stat-val" id="s-atk1">665</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">ATK (Heavy)</span>
-          <span class="stat-val" id="s-atk2">815</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">Pod DMG</span>
-          <span class="stat-val" id="s-pod">150</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">DEF</span>
-          <span class="stat-val" id="s-def">100</span>
-        </div>
-        <div class="stat-divider">System Status</div>
-        <div class="stat-row">
-          <span class="stat-key">HP</span>
-          <div class="hp-bar"><div class="hp-fill" style="width:100%"></div></div>
-          <span class="stat-val" id="s-hp">800/800</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">Gold</span>
-          <span class="stat-val" id="s-gold">1,000</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">EXP</span>
-          <span class="stat-val" id="s-exp">0</span>
-        </div>
+     <div id="lore">
+      <div class="sec-header">
+        <div class="sec-title">Lore</div>
+        <div class="sec-sub">— YorHa</div>
       </div>
+      <div class="sec-rule"></div>
+    </div>
+    
+
+     <div id="units">
+      <div class="sec-header">
+        <div class="sec-title">Units</div>
+        <div class="sec-sub">— YorHa</div>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="units-grid"></div>
     </div>
 
-  </div>
-</div>
-
-<div class="pattern">
-  <div class="container">
-    <div class="pattern-inner"></div>
-  </div>
-</div>
 
 
+    <div class="pattern">
+      <div class="container">
+        <div class="pattern-inner"></div>
+      </div>
+    </div>
+  </body>
 </html>

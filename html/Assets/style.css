@@ -32,6 +32,7 @@ body {
   background-size: 14px 14px;
   background-color: var(--bg);
   color: var(--text);
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
 a {
@@ -156,12 +157,6 @@ nav {
   padding: 0 20px;
 }
 
-#gallery {
-  max-width: 1400px;
-  margin: 24px auto 40px;
-  padding: 0 20px;
-}
-
 .sec-header {
   display: flex;
   align-items: baseline;
@@ -222,7 +217,204 @@ nav {
   margin-bottom: 8px;
 }
 
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(106, 96, 80, 0.2);
+  color: var(--text);
+  transition: background 0.2s ease;
+}
 
+.list-item:hover,
+.list-item.active {
+  background: rgba(184, 168, 122, 0.2);
+}
+
+.list-icon {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.list-icon.active-i {
+  color: var(--accent);
+}
+
+.list-name {
+  flex: 1;
+  font-size: 0.94rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-val {
+  font-size: 0.72rem;
+  letter-spacing: 0.12rem;
+  color: var(--muted);
+}
+
+.centre-panel {
+  flex: 0 0 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.img-box {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: rgba(212, 204, 176, 0.7);
+}
+
+#char-img {
+  display: block;
+  width: 132%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 48% 12%;
+  transform: translateX(-14%);
+  filter: saturate(0.9) contrast(1.08) brightness(0.98);
+}
+
+.img-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 18px;
+  background: linear-gradient(180deg, rgba(42, 32, 24, 0.05), rgba(42, 32, 24, 0.7));
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.img-cap-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--cream);
+}
+
+.img-cap-sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.18rem;
+  color: rgba(240, 236, 224, 0.9);
+  text-transform: uppercase;
+}
+
+.desc-box {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: rgba(212, 204, 176, 0.75);
+  padding: 14px 16px;
+}
+
+.desc-text {
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.stats-panel {
+  flex: 0 0 300px;
+  min-height: 560px;
+  background: rgba(212, 204, 176, 0.82);
+}
+
+.stats-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  background-color: rgba(106, 96, 80, 0.35);
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  border-left: none;
+  border-right: none;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.stats-hdr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 100%;
+  background-color: rgba(138, 127, 98, 0.08);
+  z-index: 0;
+}
+
+#stats-hdr {
+  position: relative;
+  z-index: 1;
+}
+
+.stats-body {
+  padding: 12px 14px 18px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(106, 96, 80, 0.18);
+}
+
+.stat-row.hp-row {
+  grid-template-columns: minmax(90px, 1fr) minmax(0, 1fr) auto;
+}
+
+.stat-key {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.stat-val {
+  font-size: 0.8rem;
+  color: var(--text);
+  font-weight: 700;
+  justify-self: end;
+}
+
+.hp-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(106, 96, 80, 0.12);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-left: 0;
+}
+
+.hp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5d9c66, #a5d28d);
+}
+
+.stat-divider {
+  margin: 14px 0 6px;
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  border-top: 1px solid rgba(106, 96, 80, 0.22);
+}
 
 /* Below - Pattern Taken From https://codepen.io/chriscoyier/pen/gbvJxY */
 .pattern {
