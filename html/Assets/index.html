@@ -2,14 +2,20 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./style.css">
+    <link rel="script" href="./script.js">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>DrakenNieR</title>
   </head>
   <body>
+        <div class="pattern">
+      <div class="container">
+        <div class="pattern-inner"></div>
+      </div>
+    </div>
     <nav class="top-nav">
       <div class="nav-logo-box">
-        <div class="nav-logo-text">NieR</div>
+        <div class="nav-logo-text">NieR:Automata</div>
       </div>
       <div class="nav-tabs">
         <a href="#characters" class="nav-tab active">
@@ -33,10 +39,13 @@
     <div id="characters">
       <div class="sec-header">
         <div class="sec-title">Characters</div>
-        <div class="sec-sub">— YoRHa</div>
+        <div class="sec-sub">- YoRHa</div>
       </div>
+      <br>
       <div class="sec-rule"></div>
-
+            <div class="sec-sub" >2B - Everything that lives is designed to end. We are perpetually trapped in a never ending spiral of life and death. Is this a curse? Or some kind of punishment? I often think about the god who blessed us with this cryptic puzzle… and wonder if we’ll ever get the chance to kill him</div>
+<br>
+ <div class="sec-rule"></div>
       <div class="main-layout">
         <div class="list-panel panel">
           <div class="panel-inner">
@@ -90,7 +99,7 @@
             </div>
           </div>
           <div class="desc-box">
-            <div class="desc-text" id="char-desc">bla bla bla nier nier nier nier</div>
+            <div class="desc-text" id="char-desc">2B is a YoRHa android and the main protagonist of NieR:Automata. She is calm, disciplined, and highly skilled in combat, fighting alongside 9S to protect humanity from the machines that have taken over Earth. Despite her serious personality, 2B develops a strong emotional connection with 9S as they uncover the truth behind the war and their own existence.</div>
           </div>
         </div>
 
@@ -107,16 +116,16 @@
             </div>
             <div class="stat-row">
               <span class="stat-key">Lv</span>
-              <span class="stat-val">1</span>
+              <span class="stat-val">#</span>
             </div>
             <div class="stat-divider">Combat Parameters</div>
             <div class="stat-row">
               <span class="stat-key">ATK (Light)</span>
-              <span class="stat-val" id="s-atk1">665</span>
+              <span class="stat-val" id="s-atk1">150</span>
             </div>
             <div class="stat-row">
               <span class="stat-key">ATK (Heavy)</span>
-              <span class="stat-val" id="s-atk2">815</span>
+              <span class="stat-val" id="s-atk2">300</span>
             </div>
             <div class="stat-row">
               <span class="stat-key">Pod DMG</span>
@@ -129,8 +138,6 @@
             <div class="stat-divider">System Status</div>
             <div class="stat-row hp-row">
               <span class="stat-key">HP</span>
-              <div class="hp-bar"><div class="hp-fill" style="width:100%"></div></div>
-              <span class="stat-val" id="s-hp">800/800</span>
             </div>
             <div class="stat-row">
               <span class="stat-key">Gold</span>
@@ -145,6 +152,107 @@
       </div>
     </div>
 
+        <div id="music">
+      <div class="sec-header">
+        <div class="sec-title">Music</div>
+        <div class="sec-sub">— Emi Evans, NieR:Automata.</div>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="music-grid"></div>
+    </div>
+
+<section class="nier-music">
+
+    <div class="nier-music-image">
+        <img src="DevolaAndPopolaTower.jpg" alt="NieR Replicant">
+    </div>
+
+
+    <div class="nier-music-info">
+
+        <p class="nier-music-label">
+            SOUND OF A DYING WORLD
+        </p>
+
+
+        <h2 class="nier-music-title">
+            THE MUSIC OF<br>
+            <em>EMI EVANS</em>
+        </h2>
+
+
+        <p class="nier-music-description">
+            The soundtrack of NieR is inseparable from its atmosphere.
+            Haunting vocals, layered languages, and fragile melodies
+            make the world feel both ancient and strangely familiar.
+        </p>
+
+
+        <div class="nier-track music-button" data-song="emil-sacrifice" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
+
+          <button type="button" class="track-play-pause" aria-label="Play or pause Emil / Sacrifice" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
+
+            <span class="nier-track-number" style="grid-column: 2;">
+                01
+            </span>
+
+            <span class="nier-track-title" style="grid-column: 3; align-self: center;">
+                EMIL / SACRIFICE
+            </span>
+
+            <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
+                Emi Evans
+            </span>
+
+        </div>
+
+        <audio id="emil-sacrifice" src="EmilSacrifice.mp3"></audio>
+
+
+        <div class="nier-track music-button" data-song="kaine-salvation" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
+
+          <button type="button" class="track-play-pause" aria-label="Play or pause Kainé / Salvation" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
+
+            <span class="nier-track-number" style="grid-column: 2;">
+                02
+            </span>
+
+            <span class="nier-track-title" style="grid-column: 3; align-self: center;">
+                KAINÉ / SALVATION
+            </span>
+
+            <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
+                Emi Evans
+            </span>
+
+        </div>
+
+        <audio id="kaine-salvation" src="KaineSalvation.mp3.mp3"></audio>
+
+
+        <div class="nier-track music-button" data-song="snow-in-summer" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
+
+          <button type="button" class="track-play-pause" aria-label="Play or pause Snow in Summer" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
+
+            <span class="nier-track-number" style="grid-column: 2;">
+                03
+            </span>
+
+            <span class="nier-track-title" style="grid-column: 3; align-self: center;">
+                SNOW IN SUMMER
+            </span>
+
+            <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
+                Emi Evans
+            </span>
+
+        </div>
+
+        <audio id="snow-in-summer" src="SnowInSummer.mp3"></audio>
+
+    </div>
+
+</section>
     <div id="gallery">
       <div class="sec-header">
         <div class="sec-title">Gallery</div>
@@ -154,6 +262,28 @@
       <div class="gallery-grid"></div>
     </div>
 
+    <section class="nier-music">
+
+    <div class="nier-music-image">
+        <img src="MachineLifeforms.jpg" alt="Machine Lifeforms">
+    </div>
+
+
+    <div class="nier-music-info">
+
+        <p class="nier-music-label">
+            GALLERY
+        </p>
+        <h2 class="nier-music-title">
+            NIER:AUTOMATA<br>
+        </h2>
+        <p class="nier-music-description">
+            Explore a collection of images showcasing the characters, locations, and memorable moments from NieR.
+        </p>
+</div> 
+</div>
+</div>
+</section>
      <div id="lore">
       <div class="sec-header">
         <div class="sec-title">Lore</div>
@@ -162,7 +292,6 @@
       <div class="sec-rule"></div>
     </div>
     
-
      <div id="units">
       <div class="sec-header">
         <div class="sec-title">Units</div>
@@ -170,9 +299,7 @@
       </div>
       <div class="sec-rule"></div>
       <div class="units-grid"></div>
-    </div>
-
-
+      </div>
 
     <div class="pattern">
       <div class="container">
@@ -180,4 +307,43 @@
       </div>
     </div>
   </body>
+
+  <script>
+      document.querySelectorAll('.music-button').forEach(function(button) {
+        button.addEventListener('click', function() {
+          const song = document.getElementById(button.dataset.song);
+          document.querySelectorAll('.music-button').forEach(function(otherButton) {
+            const otherSong = document.getElementById(otherButton.dataset.song);
+            if (otherSong !== song) otherSong.pause();
+          });
+          song.play();
+        });
+      });
+
+      document.querySelectorAll('.track-play-pause').forEach(function(control) {
+        control.addEventListener('click', function(event) {
+          event.stopPropagation();
+          const track = control.closest('.music-button');
+          const song = document.getElementById(track.dataset.song);
+
+          document.querySelectorAll('.music-button').forEach(function(otherTrack) {
+            const otherSong = document.getElementById(otherTrack.dataset.song);
+            if (otherSong !== song) otherSong.pause();
+          });
+
+          if (song.paused) song.play();
+          else song.pause();
+        });
+
+        const song = document.getElementById(control.closest('.music-button').dataset.song);
+        song.addEventListener('play', function() {
+          control.textContent = '❚❚';
+          control.setAttribute('aria-label', 'Pause song');
+        });
+        song.addEventListener('pause', function() {
+          control.textContent = '▶';
+          control.setAttribute('aria-label', 'Play song');
+        });
+      });
+  </script>
 </html>
