@@ -15,20 +15,23 @@
     </div>
     <nav class="top-nav">
       <div class="nav-logo-box">
-        <div class="nav-logo-text">NieR:Automata</div>
+        <div class="nav-logo-text">DrakenNieR</div>
       </div>
       <div class="nav-tabs">
         <a href="#characters" class="nav-tab active">
-          <span class="tab-icon">◈</span><span>Characters</span>
+          <span class="tab-icon">◈</span><span>Characters - NieR:Automata</span>
+        </a>
+        <a href="#characters2" class="nav-tab active">
+          <span class="tab-icon">◈</span><span>Characters - NieR:Replicant</span>
+        </a>
+        <a href="#characters3" class="nav-tab active">
+          <span class="tab-icon">◈</span><span>Characters - Drakengard 1,2,3</span>
         </a>
         <a href="#gallery" class="nav-tab">
           <span class="tab-icon">◈</span><span>Gallery</span>
         </a>
         <a href="#lore" class="nav-tab">
           <span class="tab-icon">◈</span><span>Intel</span>
-        </a>
-        <a href="#units" class="nav-tab">
-          <span class="tab-icon">◈</span><span>YoRHa Units</span>
         </a>
       </div>
       <div class="nav-sys">
@@ -39,7 +42,7 @@
     <div id="characters">
       <div class="sec-header">
         <div class="sec-title">Characters</div>
-        <div class="sec-sub">- YoRHa</div>
+        <div class="sec-sub">- NieR:Automata</div>
       </div>
       <br>
       <div class="sec-rule"></div>
@@ -152,6 +155,240 @@
       </div>
     </div>
 
+        <div id="characters2">
+      <div class="sec-header">
+        <div class="sec-title">Characters</div>
+        <div class="sec-sub">- NieR:Replicant</div>
+      </div>
+      <br>
+      <div class="sec-rule"></div>
+            <div class="sec-sub" >Devola - I am Devola, a machine created to assist you in your journey. My sister Popola and I have been tasked with guiding you through the challenges that lie ahead. We are here to provide support, information, and companionship as you navigate the world of NieR:Replicant. Together, we will uncover the mysteries that surround us and strive to protect what is precious.</div>
+<br>
+ <div class="sec-rule"></div>
+      <div class="main-layout">
+        <div class="list-panel panel">
+          <div class="panel-inner">
+            <div class="list-section-hdr">Active Units</div>
+            <a href="#" class="list-item active" onclick="showChar('kaine');return false;">
+              <span class="list-icon active-i">◆</span>
+              <span class="list-name">Kaine</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('brothernier');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Brother Nier</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('devola');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Devola</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Support</div>
+            <a href="#" class="list-item" onclick="showChar('popola');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Popola</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('yonah');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Yonah</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Antagonists</div>
+            <a href="#" class="list-item" onclick="showChar('shadowlord');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Shadow Lord</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('shades');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Shades</span>
+              <span class="list-val">—</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="centre-panel">
+          <div class="img-box" id="char-img-box">
+            <img id="char-img" src="./Kaine.jpg" alt="Kaine"/>
+            <div class="img-cap">
+              <span class="img-cap-name" id="char-fullname">Kaine</span>
+              <span class="img-cap-sub" id="char-designation">Kaine — Battle Replicant</span>
+            </div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-text" id="char-desc">Kaine is a battle replicant and a key character in NieR:Replicant. she is known for her calm demeanor and exceptional combat skills, often working in tandem with Brother Nier to fight against the shades that have overrun the world.</div>
+          </div>
+        </div>
+
+        <div class="stats-panel panel">
+          <div class="stats-hdr" id="stats-hdr">Kaine Base Stats </div>
+          <div class="stats-body">
+            <div class="stat-row">
+              <span class="stat-key">Unit</span>
+              <span class="stat-val" id="s-unit">Kaine</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Type</span>
+              <span class="stat-val" id="s-type">Battle</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Lv</span>
+              <span class="stat-val">#</span>
+            </div>
+            <div class="stat-divider">Combat Parameters</div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Light)</span>
+              <span class="stat-val" id="s-atk1">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Heavy)</span>
+              <span class="stat-val" id="s-atk2">300</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Pod DMG</span>
+              <span class="stat-val" id="s-pod">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">DEF</span>
+              <span class="stat-val" id="s-def">100</span>
+            </div>
+            <div class="stat-divider">System Status</div>
+            <div class="stat-row hp-row">
+              <span class="stat-key">HP</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Gold</span>
+              <span class="stat-val" id="s-gold">1,000</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">EXP</span>
+              <span class="stat-val" id="s-exp">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+         <div id="characters3">
+      <div class="sec-header">
+        <div class="sec-title">Characters</div>
+        <div class="sec-sub">- Drakengard 1,2,3</div>
+      </div>
+      <br>
+      <div class="sec-rule"></div>
+      <div class="sec-sub" >Do you humans always attack creatures as they peacefully soar through the sky?
+My name is Michael. If you enjoy killing each other as much as you seem to,
+perhaps you'd allow me to join in on the fun!</div>
+<br>
+ <div class="sec-rule"></div>
+      <div class="main-layout">
+        <div class="list-panel panel">
+          <div class="panel-inner">
+            <div class="list-section-hdr">Dragon Dragoon</div>
+            <a href="#" class="list-item active" onclick="showChar('zero');return false;">
+              <span class="list-icon active-i">◆</span>
+              <span class="list-name">Zero</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('accord');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Accord</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('caim');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Caim</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Support</div>
+            <a href="#" class="list-item" onclick="showChar('furiae');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Furiae</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('onebrother');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">One (Brother)</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Antagonists</div>
+            <a href="#" class="list-item" onclick="showChar('manah');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Manah</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('one');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">One</span>
+              <span class="list-val">—</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="centre-panel">
+          <div class="img-box" id="char-img-box">
+            <img id="char-img" src="./Zero.jpg" alt="Zero"/>
+            <div class="img-cap">
+              <span class="img-cap-name" id="char-fullname">Zero</span>
+              <span class="img-cap-sub" id="char-designation">Zero — Dragon Dragoon</span>
+            </div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-text" id="char-desc">Zero </div>
+          </div>
+        </div>
+
+        <div class="stats-panel panel">
+          <div class="stats-hdr" id="stats-hdr">Zero Base Stats </div>
+          <div class="stats-body">
+            <div class="stat-row">
+              <span class="stat-key">Unit</span>
+              <span class="stat-val" id="s-unit">Zero</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Type</span>
+              <span class="stat-val" id="s-type">Battle</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Lv</span>
+              <span class="stat-val">#</span>
+            </div>
+            <div class="stat-divider">Combat Parameters</div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Light)</span>
+              <span class="stat-val" id="s-atk1">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Heavy)</span>
+              <span class="stat-val" id="s-atk2">300</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Pod DMG</span>
+              <span class="stat-val" id="s-pod">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">DEF</span>
+              <span class="stat-val" id="s-def">100</span>
+            </div>
+            <div class="stat-divider">System Status</div>
+            <div class="stat-row hp-row">
+              <span class="stat-key">HP</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Gold</span>
+              <span class="stat-val" id="s-gold">1,000</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">EXP</span>
+              <span class="stat-val" id="s-exp">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
         <div id="music">
       <div class="sec-header">
         <div class="sec-title">Music</div>
@@ -162,95 +399,64 @@
     </div>
 
 <section class="nier-music">
-
     <div class="nier-music-image">
         <img src="DevolaAndPopolaTower.jpg" alt="NieR Replicant">
     </div>
-
-
     <div class="nier-music-info">
-
         <p class="nier-music-label">
             SOUND OF A DYING WORLD
         </p>
-
-
         <h2 class="nier-music-title">
             THE MUSIC OF<br>
             <em>EMI EVANS</em>
         </h2>
-
-
         <p class="nier-music-description">
             The soundtrack of NieR is inseparable from its atmosphere.
             Haunting vocals, layered languages, and fragile melodies
             make the world feel both ancient and strangely familiar.
         </p>
-
-
         <div class="nier-track music-button" data-song="emil-sacrifice" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
-
           <button type="button" class="track-play-pause" aria-label="Play or pause Emil / Sacrifice" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
-
             <span class="nier-track-number" style="grid-column: 2;">
                 01
             </span>
-
             <span class="nier-track-title" style="grid-column: 3; align-self: center;">
                 EMIL / SACRIFICE
             </span>
-
             <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
                 Emi Evans
             </span>
-
         </div>
 
         <audio id="emil-sacrifice" src="EmilSacrifice.mp3"></audio>
-
-
         <div class="nier-track music-button" data-song="kaine-salvation" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
-
           <button type="button" class="track-play-pause" aria-label="Play or pause Kainé / Salvation" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
-
             <span class="nier-track-number" style="grid-column: 2;">
                 02
             </span>
-
             <span class="nier-track-title" style="grid-column: 3; align-self: center;">
                 KAINÉ / SALVATION
             </span>
-
             <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
                 Emi Evans
             </span>
-
         </div>
-
         <audio id="kaine-salvation" src="KaineSalvation.mp3.mp3"></audio>
-
-
         <div class="nier-track music-button" data-song="snow-in-summer" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
-
           <button type="button" class="track-play-pause" aria-label="Play or pause Snow in Summer" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
-
             <span class="nier-track-number" style="grid-column: 2;">
                 03
             </span>
-
             <span class="nier-track-title" style="grid-column: 3; align-self: center;">
                 SNOW IN SUMMER
             </span>
-
             <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
                 Emi Evans
             </span>
-
         </div>
-
         <audio id="snow-in-summer" src="SnowInSummer.mp3"></audio>
-
     </div>
+
 
 </section>
     <div id="gallery">
