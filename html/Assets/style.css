@@ -22,6 +22,13 @@
   box-sizing: border-box;
 }
 
+#logoimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+}
+
 html {
   scroll-behavior: smooth;
 }
