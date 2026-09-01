@@ -35,9 +35,41 @@
         </a>
       </div>
       <div class="nav-sys">
-        <div class="status-dot"></div>
+        
       </div>
     </nav>
+
+    <div id="gameheader">
+      <div class="sec-header">
+        <div class="sec-title">NieR</div>
+        <div class="sec-sub">—  NieR:Automata | NieR:Replicant </div>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="music-grid"></div>
+    </div>
+
+<section class="nier-music">
+    <div class="nier-music-image">
+        <img src="PreludeToNier.jpg" alt="NieR">
+    </div>
+    <div class="nier-music-info">
+        <p class="nier-music-label">
+            NieR:Automata & NieR:Replicant
+        </p>
+        <h2 class="nier-music-title">
+            Automata:<br>
+        </h2>
+        <p class="nier-music-description">
+            Earth was invaded by aliens, forcing surviving humans to flee to a lunar base. Humanity sends elite android soldiers of the YoRHa squad—primarily characters 2B, 9S, and A2—to reclaim the planet.
+        </p>
+        <h2 class="nier-music-title">
+            Replicant:<br>
+        </h2>
+        <p class="nier-music-description">
+          Set in a decaying, apocalyptic future where human civilization has regressed to medieval conditions, the story follows a kind young man. He embarks on a desperate quest to find a cure for his sister, Yonah, who is terminally ill with a mysterious disease called the Black Scrawl. Alongside a strange, talking magical book named Grimoire Weiss, he searches for the "Sealed verses" to save his sister, encountering unusual allies and dangerous shadow-like monsters known as shades along the way. The narrative explores themes of sacrifice, the nature of humanity, and the consequences of one's actions in a world filled with moral ambiguity.
+        </p>
+    </div>
+</section>
 
     <div id="characters">
       <div class="sec-header">
@@ -211,7 +243,7 @@
 
         <div class="centre-panel">
           <div class="img-box" id="char-img-box">
-            <img id="char-img" src="./Kaine.jpg" alt="Kaine"/>
+            <img id="char-imgkaine" src="./kaine3drender.png" alt="Kaine"/>
             <div class="img-cap">
               <span class="img-cap-name" id="char-fullname">Kaine</span>
               <span class="img-cap-sub" id="char-designation">Kaine — Battle Replicant</span>
@@ -228,124 +260,6 @@
             <div class="stat-row">
               <span class="stat-key">Unit</span>
               <span class="stat-val" id="s-unit">Kaine</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-key">Type</span>
-              <span class="stat-val" id="s-type">Battle</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-key">Lv</span>
-              <span class="stat-val">#</span>
-            </div>
-            <div class="stat-divider">Combat Parameters</div>
-            <div class="stat-row">
-              <span class="stat-key">ATK (Light)</span>
-              <span class="stat-val" id="s-atk1">150</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-key">ATK (Heavy)</span>
-              <span class="stat-val" id="s-atk2">300</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-key">Pod DMG</span>
-              <span class="stat-val" id="s-pod">150</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-key">DEF</span>
-              <span class="stat-val" id="s-def">100</span>
-            </div>
-            <div class="stat-divider">System Status</div>
-            <div class="stat-row hp-row">
-              <span class="stat-key">HP</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-key">Gold</span>
-              <span class="stat-val" id="s-gold">1,000</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-key">EXP</span>
-              <span class="stat-val" id="s-exp">0</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-         <div id="characters3">
-      <div class="sec-header">
-        <div class="sec-title">Characters</div>
-        <div class="sec-sub">- Drakengard 1,2,3</div>
-      </div>
-      <br>
-      <div class="sec-rule"></div>
-      <div class="sec-sub" >Do you humans always attack creatures as they peacefully soar through the sky?
-My name is Michael. If you enjoy killing each other as much as you seem to,
-perhaps you'd allow me to join in on the fun!</div>
-<br>
- <div class="sec-rule"></div>
-      <div class="main-layout">
-        <div class="list-panel panel">
-          <div class="panel-inner">
-            <div class="list-section-hdr">Dragon Dragoon</div>
-            <a href="#" class="list-item active" onclick="showChar('zero');return false;">
-              <span class="list-icon active-i">◆</span>
-              <span class="list-name">Zero</span>
-              <span class="list-val">Lv.1</span>
-            </a>
-            <a href="#" class="list-item" onclick="showChar('accord');return false;">
-              <span class="list-icon">◇</span>
-              <span class="list-name">Accord</span>
-              <span class="list-val">Lv.1</span>
-            </a>
-            <a href="#" class="list-item" onclick="showChar('caim');return false;">
-              <span class="list-icon">◇</span>
-              <span class="list-name">Caim</span>
-              <span class="list-val">—</span>
-            </a>
-            <div class="list-section-hdr" style="margin-top:2px">Support</div>
-            <a href="#" class="list-item" onclick="showChar('furiae');return false;">
-              <span class="list-icon">◇</span>
-              <span class="list-name">Furiae</span>
-              <span class="list-val">—</span>
-            </a>
-            <a href="#" class="list-item" onclick="showChar('onebrother');return false;">
-              <span class="list-icon">◇</span>
-              <span class="list-name">One (Brother)</span>
-              <span class="list-val">—</span>
-            </a>
-            <div class="list-section-hdr" style="margin-top:2px">Antagonists</div>
-            <a href="#" class="list-item" onclick="showChar('manah');return false;">
-              <span class="list-icon">◇</span>
-              <span class="list-name">Manah</span>
-              <span class="list-val">—</span>
-            </a>
-            <a href="#" class="list-item" onclick="showChar('one');return false;">
-              <span class="list-icon">◇</span>
-              <span class="list-name">One</span>
-              <span class="list-val">—</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="centre-panel">
-          <div class="img-box" id="char-img-box">
-            <img id="char-img" src="./Zero.jpg" alt="Zero"/>
-            <div class="img-cap">
-              <span class="img-cap-name" id="char-fullname">Zero</span>
-              <span class="img-cap-sub" id="char-designation">Zero — Dragon Dragoon</span>
-            </div>
-          </div>
-          <div class="desc-box">
-            <div class="desc-text" id="char-desc">Zero </div>
-          </div>
-        </div>
-
-        <div class="stats-panel panel">
-          <div class="stats-hdr" id="stats-hdr">Zero Base Stats </div>
-          <div class="stats-body">
-            <div class="stat-row">
-              <span class="stat-key">Unit</span>
-              <span class="stat-val" id="s-unit">Zero</span>
             </div>
             <div class="stat-row">
               <span class="stat-key">Type</span>
