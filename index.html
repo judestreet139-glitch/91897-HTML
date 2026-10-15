@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="script" href="./script.js">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DrakenNieR</title>
+  </head>
+  <body>
+        <div class="pattern">
+      <div class="container">
+        <div class="pattern-inner"></div>
+      </div>
+    </div>
+    <nav class="top-nav">
+      <div class="nav-logo-box">
+      <img id="logoimg" src="./emillogo.jpg" alt="emil">
+      </div>
+      <div class="nav-tabs">
+        <a href="#characters" class="nav-tab active">
+          <span class="tab-icon">◈</span><span>Characters - NieR:Automata</span>
+        </a>
+        <a href="#characters2" class="nav-tab active">
+          <span class="tab-icon">◈</span><span>Characters - NieR:Replicant</span>
+        </a>
+        <a href="#gallery" class="nav-tab active">
+          <span class="tab-icon">◈</span><span>Gallery</span>
+        </a>
+        <a href="#lore" class="nav-tab active">
+          <span class="tab-icon">◈</span><span>Intel</span>
+        </a>
+      </div>
+      <div class="nav-sys">
+        
+      </div>
+    </nav>
+
+    <div id="gameheader">
+      <div class="sec-header">
+        <div class="sec-title">NieR</div>
+        <div class="sec-sub">—  NieR:Automata | NieR:Replicant </div>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="music-grid"></div>
+    </div>
+
+<section class="nier-music">
+    <div class="nier-music-image">
+        <img src="PreludeToNier.jpg" alt="NieR">
+    </div>
+    <div class="nier-music-info">
+        <p class="nier-music-label">
+            NieR:Automata & NieR:Replicant
+        </p>
+        <h2 class="nier-music-title">
+            Automata:<br>
+        </h2>
+        <p class="nier-music-description">
+            Earth was invaded by aliens, forcing surviving humans to flee to a lunar base. Humanity sends elite android soldiers of the YoRHa squad—primarily characters 2B, 9S, and A2—to reclaim the planet.
+        </p>
+        <h2 class="nier-music-title">
+            Replicant:<br>
+        </h2>
+        <p class="nier-music-description">
+          Set in a decaying, apocalyptic future where human civilization has regressed to medieval conditions, the story follows a kind young man. He embarks on a desperate quest to find a cure for his sister, Yonah, who is terminally ill with a mysterious disease called the Black Scrawl. Alongside a strange, talking magical book named Grimoire Weiss, he searches for the "Sealed verses" to save his sister, encountering unusual allies and dangerous shadow-like monsters known as shades along the way. The narrative explores themes of sacrifice, the nature of humanity, and the consequences of one's actions in a world filled with moral ambiguity.
+        </p>
+    </div>
+</section>
+
+    <div id="characters">
+      <div class="sec-header">
+        <div class="sec-title">Characters</div>
+        <div class="sec-sub">- NieR:Automata</div>
+      </div>
+      <br>
+      <div class="sec-rule"></div>
+            <div class="sec-sub" >2B - Everything that lives is designed to end. We are perpetually trapped in a never ending spiral of life and death. Is this a curse? Or some kind of punishment? I often think about the god who blessed us with this cryptic puzzle… and wonder if we’ll ever get the chance to kill him</div>
+<br>
+ <div class="sec-rule"></div>
+      <div class="main-layout">
+        <div class="list-panel panel">
+          <div class="panel-inner">
+            <div class="list-section-hdr">Active Units</div>
+            <a href="#" class="list-item active" onclick="showChar('2b');return false;">
+              <span class="list-icon active-i">◆</span>
+              <span class="list-name">YoRHa No.2 Type B</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('9s');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">YoRHa No.9 Type S</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('a2');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">YoRHa Type A No.2</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Support</div>
+            <a href="#" class="list-item" onclick="showChar('cmd');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Commander White</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('pod');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Pod 042 / Pod 153</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Antagonists</div>
+            <a href="#" class="list-item" onclick="showChar('adam');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Adam</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('eve');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Eve</span>
+              <span class="list-val">—</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="centre-panel">
+          <div class="img-box" id="char-img-box">
+            <img id="char-img" src="./2b.png" alt="2B"/>
+            <div class="img-cap">
+              <span class="img-cap-name" id="char-fullname">YoRHa No.2 Type B</span>
+              <span class="img-cap-sub" id="char-designation">2B — Battle Android</span>
+            </div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-text" id="char-desc">2B is a YoRHa android and the main protagonist of NieR:Automata. She is calm, disciplined, and highly skilled in combat, fighting alongside 9S to protect humanity from the machines that have taken over Earth. Despite her serious personality, 2B develops a strong emotional connection with 9S as they uncover the truth behind the war and their own existence.</div>
+          </div>
+        </div>
+
+        <div class="stats-panel panel">
+          <div class="stats-hdr" id="stats-hdr">2B Base Stats (Lvl 1)</div>
+          <div class="stats-body">
+            <div class="stat-row">
+              <span class="stat-key">Unit</span>
+              <span class="stat-val" id="s-unit">2B</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Type</span>
+              <span class="stat-val" id="s-type">Battle</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Lv</span>
+              <span class="stat-val">#</span>
+            </div>
+            <div class="stat-divider">Combat Parameters</div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Light)</span>
+              <span class="stat-val" id="s-atk1">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Heavy)</span>
+              <span class="stat-val" id="s-atk2">300</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Pod DMG</span>
+              <span class="stat-val" id="s-pod">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">DEF</span>
+              <span class="stat-val" id="s-def">100</span>
+            </div>
+            <div class="stat-divider">System Status</div>
+            <div class="stat-row hp-row">
+              <span class="stat-key">HP</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Gold</span>
+              <span class="stat-val" id="s-gold">1,000</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">EXP</span>
+              <span class="stat-val" id="s-exp">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div id="characters2">
+      <div class="sec-header">
+        <div class="sec-title">Characters</div>
+        <div class="sec-sub">- NieR:Replicant</div>
+      </div>
+      <br>
+      <div class="sec-rule"></div>
+            <div class="sec-sub" >Devola - I am Devola, a machine created to assist you in your journey. My sister Popola and I have been tasked with guiding you through the challenges that lie ahead. We are here to provide support, information, and companionship as you navigate the world of NieR:Replicant. Together, we will uncover the mysteries that surround us and strive to protect what is precious.</div>
+<br>
+ <div class="sec-rule"></div>
+      <div class="main-layout">
+        <div class="list-panel panel">
+          <div class="panel-inner">
+            <div class="list-section-hdr">Active Units</div>
+            <a href="#" class="list-item active" onclick="showChar('kaine');return false;">
+              <span class="list-icon active-i">◆</span>
+              <span class="list-name">Kaine</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('brothernier');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Brother Nier</span>
+              <span class="list-val">Lv.1</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('devola');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Devola</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Support</div>
+            <a href="#" class="list-item" onclick="showChar('popola');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Popola</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('yonah');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Yonah</span>
+              <span class="list-val">—</span>
+            </a>
+            <div class="list-section-hdr" style="margin-top:2px">Antagonists</div>
+            <a href="#" class="list-item" onclick="showChar('shadowlord');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Shadow Lord</span>
+              <span class="list-val">—</span>
+            </a>
+            <a href="#" class="list-item" onclick="showChar('shades');return false;">
+              <span class="list-icon">◇</span>
+              <span class="list-name">Shades</span>
+              <span class="list-val">—</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="centre-panel">
+          <div class="img-box" id="char-img-box">
+            <img id="char-imgkaine" src="./kaine3drender.png" alt="Kaine"/>
+            <div class="img-cap">
+              <span class="img-cap-name" id="char-fullname">Kaine</span>
+              <span class="img-cap-sub" id="char-designation">Kaine — Battle Replicant</span>
+            </div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-text" id="char-desc">Kaine is a battle replicant and a key character in NieR:Replicant. she is known for her calm demeanor and exceptional combat skills, often working in tandem with Brother Nier to fight against the shades that have overrun the world.</div>
+          </div>
+        </div>
+
+        <div class="stats-panel panel">
+          <div class="stats-hdr" id="stats-hdr">Kaine Base Stats </div>
+          <div class="stats-body">
+            <div class="stat-row">
+              <span class="stat-key">Unit</span>
+              <span class="stat-val" id="s-unit">Kaine</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Type</span>
+              <span class="stat-val" id="s-type">Battle</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Lv</span>
+              <span class="stat-val">#</span>
+            </div>
+            <div class="stat-divider">Combat Parameters</div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Light)</span>
+              <span class="stat-val" id="s-atk1">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">ATK (Heavy)</span>
+              <span class="stat-val" id="s-atk2">300</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Pod DMG</span>
+              <span class="stat-val" id="s-pod">150</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">DEF</span>
+              <span class="stat-val" id="s-def">100</span>
+            </div>
+            <div class="stat-divider">System Status</div>
+            <div class="stat-row hp-row">
+              <span class="stat-key">HP</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">Gold</span>
+              <span class="stat-val" id="s-gold">1,000</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-key">EXP</span>
+              <span class="stat-val" id="s-exp">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div id="music">
+      <div class="sec-header">
+        <div class="sec-title">Music</div>
+        <div class="sec-sub">— Emi Evans, NieR:Automata.</div>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="music-grid"></div>
+    </div>
+
+<section class="nier-music">
+    <div class="nier-music-image">
+        <img src="DevolaAndPopolaTower.jpg" alt="NieR Replicant">
+    </div>
+    <div class="nier-music-info">
+        <p class="nier-music-label">
+            SOUND OF A DYING WORLD
+        </p>
+        <h2 class="nier-music-title">
+            THE MUSIC OF<br>
+            <em>EMI EVANS</em>
+        </h2>
+        <p class="nier-music-description">
+            The soundtrack of NieR is inseparable from its atmosphere.
+            Haunting vocals, layered languages, and fragile melodies
+            make the world feel both ancient and strangely familiar.
+        </p>
+        <div class="nier-track music-button" data-song="emil-sacrifice" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
+          <button type="button" class="track-play-pause" aria-label="Play or pause Emil / Sacrifice" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
+            <span class="nier-track-number" style="grid-column: 2;">
+                01
+            </span>
+            <span class="nier-track-title" style="grid-column: 3; align-self: center;">
+                EMIL / SACRIFICE
+            </span>
+            <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
+                Emi Evans
+            </span>
+        </div>
+
+        <audio id="emil-sacrifice" src="EmilSacrifice.mp3"></audio>
+        <div class="nier-track music-button" data-song="kaine-salvation" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
+          <button type="button" class="track-play-pause" aria-label="Play or pause Kainé / Salvation" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
+            <span class="nier-track-number" style="grid-column: 2;">
+                02
+            </span>
+            <span class="nier-track-title" style="grid-column: 3; align-self: center;">
+                KAINÉ / SALVATION
+            </span>
+            <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
+                Emi Evans
+            </span>
+        </div>
+        <audio id="kaine-salvation" src="KaineSalvation.mp3.mp3"></audio>
+        <div class="nier-track music-button" data-song="snow-in-summer" role="button" tabindex="0" style="grid-template-columns: 42px 50px minmax(0, 1fr) 150px; column-gap: 12px;">
+          <button type="button" class="track-play-pause" aria-label="Play or pause Snow in Summer" style="grid-column: 1; width: 30px; height: 30px; padding: 0; border: 1px solid rgba(30, 29, 26, 0.45); border-radius: 50%; background: rgba(255, 255, 255, 0.28); color: #1e1d1a; font-size: 12px; line-height: 28px; text-align: center; cursor: pointer;">▶</button>
+            <span class="nier-track-number" style="grid-column: 2;">
+                03
+            </span>
+            <span class="nier-track-title" style="grid-column: 3; align-self: center;">
+                SNOW IN SUMMER
+            </span>
+            <span class="nier-track-artist" style="grid-column: 4; align-self: center;">
+                Emi Evans
+            </span>
+        </div>
+        <audio id="snow-in-summer" src="SnowInSummer.mp3"></audio>
+    </div>
+
+
+</section>
+    <div id="gallery">
+      <div class="sec-header">
+        <div class="sec-title">Gallery</div>
+        <div class="sec-sub">— YorHa</div>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="gallery-grid"></div>
+    </div>
+
+    <section class="nier-music">
+
+    <div class="nier-music-image">
+        <img src="MachineLifeforms.jpg" alt="Machine Lifeforms">
+    </div>
+
+
+    <div class="nier-music-info">
+
+        <p class="nier-music-label">
+            GALLERY
+        </p>
+        <h2 class="nier-music-title">
+            NIER:AUTOMATA<br>
+        </h2>
+        <p class="nier-music-description">
+            Explore a collection of images showcasing the characters, locations, and memorable moments from NieR.
+        </p>
+
+        <div class="gallery">
+
+<div class="gallery-item">
+  <a target="_blank" href="PreludeToNier.jpg">
+    <img src="PreludeToNier.jpg" alt="prelude" width="600" height="400">
+  </a>
+  <div class="desc">Prelude To NieR</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="LunarTear.jpg">
+    <img src="LunarTear.jpg" alt="LunarTear" width="600" height="400">
+  </a>
+  <div class="desc">Lunar Tear</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="TheTwins.jpg">
+    <img src="TheTwins.jpg" alt="The Twins" width="600" height="400">
+  </a>
+  <div class="desc">The Twins</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="YorHaShip.jpg">
+    <img src="YorHaShip.jpg" alt="YorHa Ship" width="600" height="400">
+  </a>
+  <div class="desc">YorHa Ship</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="DevolaAndPopolaTower.jpg">
+    <img src="DevolaAndPopolaTower.jpg" alt="Devola and Popola Tower" width="600" height="400">
+  </a>
+  <div class="desc">Devola and Popola Tower</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="2016AD.jpg">
+    <img src="2016AD.jpg" alt="2016 AD" width="600" height="400">
+  </a>
+  <div class="desc">2016 AD</div>
+</div>
+
+</div>
+
+</div> 
+</div>
+</div>
+</section>
+     <div id="lore">
+      <div class="sec-header">
+        <div class="sec-title">Lore</div>
+        <div class="sec-sub">— YorHa</div>
+      </div>
+      <div class="sec-rule"></div>
+
+      <p class="nier-music-description">
+            Explore a description of lore showcasing the characters, locations, and memorable moments from NieR:Automata & NieR:Replicant.
+        </p>
+
+        <section class="lore-section">
+
+    
+
+    <p class="lore-intro">
+        The story of NieR spans thousands of years and connects the worlds of
+        Drakengard, NieR Replicant and NieR:Automata. What begins with a
+        supernatural event eventually leads to the destruction of humanity,
+        the creation of Replicants and Gestalts, and the endless conflict
+        between Androids and Machines.
+    </p>
+
+
+    <!-- DRAKENGARD 3 -->
+
+    <article class="">
+        <h2>Drakengard 3</h2>
+
+        <p>
+            Long before the events of NieR, the world was shaped by a mysterious
+            woman known as Zero. Zero was one of the Intoners, five sisters who
+            possessed extraordinary powers connected to singing. The Intoners
+            were created through Zero's attempt to destroy a supernatural flower
+            that had infected her. The flower was a parasitic entity capable of
+            granting immense power while eventually consuming its host.
+        </p>
+
+        <p>
+            Zero eventually became determined to kill her own sisters before they
+            could spread their influence throughout the world. However, the
+            Intoners became powerful rulers, each controlling their own territory.
+            Zero created a dragon named Michael to help her fight them.
+        </p>
+
+        <p>
+            The events of Drakengard 3 follow Zero as she travels across the world
+            hunting down the other Intoners. Her journey eventually leads to a
+            confrontation with One, the youngest and most powerful of the
+            Intoners.
+        </p>
+
+        <p>
+            Zero's dragon Michael eventually dies, forcing her to find another
+            dragon. His reincarnation, Mikhail, becomes Zero's new companion.
+            Although Mikhail appears innocent and childlike, he possesses enormous
+            power and becomes deeply attached to Zero.
+        </p>
+
+        <p>
+            The events surrounding Zero and the Intoners eventually lead into the
+            complicated branching timelines of Drakengard. One important
+            consequence is the creation of Accord, an organisation that observes
+            different timelines and records events across the world.
+        </p>
+    </article>
+
+
+    <!-- DRAKENGARD -->
+
+    <article class="lore-entry">
+        <h2>Drakengard</h2>
+
+        <p>
+            Centuries later, the world of Drakengard follows Caim, a young prince
+            whose kingdom is attacked during a brutal conflict. During the attack,
+            Caim's parents are killed and he is seriously wounded.
+        </p>
+
+        <p>
+            Near death, Caim encounters a dying dragon. In order to survive,
+            the two form a pact. Caim sacrifices his ability to speak in exchange
+            for the dragon's power, creating a supernatural bond between human
+            and dragon.
+        </p>
+
+        <p>
+            Caim eventually becomes involved in a massive war involving the Union,
+            the Empire and the mysterious Grotesquerie Queen. The world is filled
+            with supernatural creatures, magical weapons and beings whose existence
+            is connected to powerful forces beyond humanity.
+        </p>
+
+        <p>
+            Caim is eventually joined by several companions, including the dragon
+            Angelus. Their journey gradually reveals that the conflict is much
+            larger than a normal war.
+        </p>
+
+        <p>
+            The Grotesquerie Queen possesses a supernatural power that threatens
+            the stability of the world itself. Drakengard contains several
+            possible endings, but one particular ending becomes extremely
+            important to the history of NieR.
+        </p>
+    </article>
+
+
+    <!-- ENDING E -->
+
+    <article class="lore-entry">
+        <h2>Drakengard Ending E</h2>
+
+        <p>
+            In Drakengard's fifth ending, Caim and Angelus pursue the Grotesquerie
+            Queen through a mysterious dimensional phenomenon. The battle
+            eventually transports Caim and Angelus away from their own world
+            and into another dimension.
+        </p>
+
+        <p>
+            They arrive in modern-day Tokyo in 2003.
+        </p>
+
+        <p>
+            The appearance of the dragon and the Grotesquerie Queen causes a
+            confrontation with the Japanese military. Caim and Angelus fight
+            through the sky above Tokyo, but the military eventually shoots
+            down Angelus.
+        </p>
+
+        <p>
+            Angelus falls from the sky and dies, while the Grotesquerie Queen's
+            remains release an unknown supernatural substance into the atmosphere.
+        </p>
+
+        <p>
+            This event creates the connection between Drakengard and the NieR
+            universe. The supernatural particles eventually become connected
+            to a devastating disease known as White Chlorination Syndrome.
+        </p>
+    </article>
+
+
+    <!-- WHITE CHLORINATION SYNDROME -->
+
+    <article class="lore-entry">
+        <h2>White Chlorination Syndrome</h2>
+
+        <p>
+            After the events of Drakengard's Ending E, strange particles begin
+            appearing in the atmosphere. Humanity initially has no understanding
+            of what has happened.
+        </p>
+
+        <p>
+            The particles are connected to a supernatural phenomenon that causes
+            humans who become infected to either die or enter a violent state
+            of madness. This disease becomes known as White Chlorination Syndrome,
+            or WCS.
+        </p>
+
+        <p>
+            The disease spreads throughout the human population and becomes one
+            of the greatest threats humanity has ever faced.
+        </p>
+
+        <p>
+            Humanity eventually discovers that the disease is connected to the
+            arrival of the supernatural matter from the Drakengard world.
+            Researchers desperately search for a way to stop the disease.
+        </p>
+
+        <p>
+            This eventually leads to one of the most important scientific
+            projects in the entire NieR universe.
+        </p>
+    </article>
+
+
+    <!-- PROJECT GESTALT -->
+
+    <article class="lore-entry">
+        <h2>Project Gestalt</h2>
+
+        <p>
+            Scientists create Project Gestalt, an enormous plan intended to
+            preserve humanity.
+        </p>
+
+        <p>
+            The basic idea is to separate a person's soul, known as a Gestalt,
+            from their physical body. The original body, called a Replicant,
+            would then be created without the person's original consciousness.
+        </p>
+
+        <p>
+            The Gestalt would be preserved separately until humanity could
+            eventually be restored.
+        </p>
+
+        <p>
+            However, there is a major problem. The Replicant bodies are not
+            supposed to develop independent consciousness. They are intended to
+            be empty biological vessels that will eventually receive their
+            original Gestalts.
+        </p>
+
+        <p>
+            Instead, the Replicants gradually develop their own personalities,
+            emotions and societies.
+        </p>
+    </article>
+
+
+    <!-- SHADOWLORD -->
+
+    <article class="lore-entry">
+        <h2>The Shadowlord</h2>
+
+        <p>
+            One particular human becomes extremely important to Project Gestalt.
+            This man becomes known as the Shadowlord.
+        </p>
+
+        <p>
+            His Gestalt is unusually powerful and stable. His continued existence
+            becomes essential to Project Gestalt because the Replicant system
+            depends on his Gestalt remaining stable.
+        </p>
+
+        <p>
+            The Shadowlord's Replicant is a young boy who becomes known as NieR.
+            The Shadowlord's daughter, Yonah, also becomes extremely important.
+        </p>
+
+        <p>
+            When Yonah becomes infected with the Black Scrawl, the Shadowlord
+            agrees to become part of Project Gestalt in the hope that the plan
+            will eventually allow humanity to survive.
+        </p>
+
+        <p>
+            However, the plan begins to fail. Gestalts begin to relapse into
+            violent, unstable forms known as Shades.
+        </p>
+    </article>
+
+
+    <!-- NIER REPLICANT -->
+
+    <article class="lore-entry">
+        <h2>NieR Replicant</h2>
+
+        <p>
+            Many years later, the world has become almost unrecognisable.
+            Human civilisation has collapsed. Cities and buildings from the old
+            world remain as ruins, while small Replicant communities have formed
+            throughout the world.
+        </p>
+
+        <p>
+            The protagonist lives with his younger sister, Yonah, in a small
+            village. Yonah suffers from the Black Scrawl, a mysterious disease
+            that causes black markings to spread across the body.
+        </p>
+
+        <p>
+            NieR becomes determined to find a cure for her. He eventually
+            discovers Grimoire Weiss, a mysterious talking book capable of using
+            powerful magic.
+        </p>
+
+        <p>
+            NieR eventually meets Kainé, a warrior who has been possessed by a
+            Shade, and Emil, a young boy with incredible magical powers.
+        </p>
+
+        <p>
+            Together, the group searches for the Sealed Verses while fighting
+            the Shades that have appeared throughout the world.
+        </p>
+    </article>
+
+
+    <!-- SHADES -->
+
+    <article class="lore-entry">
+        <h2>The Truth About the Shades</h2>
+
+        <p>
+            As NieR's journey continues, the truth behind the Shades gradually
+            becomes clear.
+        </p>
+
+        <p>
+            The creatures that NieR and his companions have been killing are not
+            simply monsters. They are the Gestalts of the original humans.
+        </p>
+
+        <p>
+            The Replicants are the physical bodies created for those humans,
+            while the Shades are the separated souls.
+        </p>
+
+        <p>
+            This means that the world of NieR is built upon a terrible
+            misunderstanding. The Replicants believe that they are human, while
+            the Gestalts believe that they are the original humans.
+        </p>
+
+        <p>
+            Both sides have been fighting for survival without fully understanding
+            what the other side truly is.
+        </p>
+    </article>
+
+
+    <!-- SHADOWLORD'S CASTLE -->
+
+    <article class="lore-entry">
+        <h2>The Shadowlord's Castle</h2>
+
+        <p>
+            Eventually, NieR discovers that the Shadowlord is responsible for
+            much of what has happened to Yonah.
+        </p>
+
+        <p>
+            The Shadowlord's goal is to reunite with his Replicant body and
+            restore his daughter.
+        </p>
+
+        <p>
+            NieR eventually reaches the Shadowlord's castle and confronts him.
+            During the confrontation, the Shadowlord is defeated.
+        </p>
+
+        <p>
+            His Gestalt finally collapses. Without the Shadowlord's Gestalt,
+            the remaining Gestalts can no longer be properly maintained.
+            Project Gestalt effectively collapses.
+        </p>
+    </article>
+
+
+    <!-- GESTALT COLLAPSE -->
+
+    <article class="lore-entry">
+        <h2>The Gestalt Collapse</h2>
+
+        <p>
+            After the Shadowlord's defeat, the Replicants continue living while
+            the original humans gradually disappear.
+        </p>
+
+        <p>
+            The Black Scrawl continues to spread, while the Shades become
+            increasingly unstable.
+        </p>
+
+        <p>
+            The Replicants begin to disappear one by one as the biological system
+            that supported their existence breaks down.
+        </p>
+
+        <p>
+            NieR successfully saved Yonah, but the price of doing so was
+            effectively the end of the original human race.
+        </p>
+    </article>
+
+
+    <!-- THOUSANDS OF YEARS LATER -->
+
+    <article class="lore-entry">
+        <h2>Thousands of Years Later</h2>
+
+        <p>
+            The events of NieR Replicant take place thousands of years before
+            NieR:Automata.
+        </p>
+
+        <p>
+            During this enormous period of time, the remaining Replicant
+            civilisation eventually disappears. Humanity itself is already
+            effectively extinct.
+        </p>
+
+        <p>
+            The world continues to decay, with nature reclaiming the ruins of
+            human civilisation.
+        </p>
+
+        <p>
+            Eventually, a new conflict begins between two artificial populations:
+            Androids and Machines.
+        </p>
+    </article>
+
+
+    <!-- ALIEN INVASION -->
+
+    <article class="lore-entry">
+        <h2>The Alien Invasion</h2>
+
+        <p>
+            At some point in the distant future, aliens arrive on Earth and
+            deploy armies of Machines.
+        </p>
+
+        <p>
+            The Machines successfully overwhelm the planet. The surviving
+            humans escape to the Moon, while Android forces remain on Earth
+            and continue fighting the Machines.
+        </p>
+
+        <p>
+            The Androids are given a single purpose: protect humanity and
+            eventually reclaim Earth.
+        </p>
+
+        <p>
+            However, the humans on the Moon are already dead. Humanity no
+            longer exists, but the Androids continue fighting for a species
+            that has already disappeared.
+        </p>
+    </article>
+
+
+    <!-- MACHINE NETWORK -->
+
+    <article class="lore-entry">
+        <h2>The Machine Network</h2>
+
+        <p>
+            The Machines initially appear to be simple weapons controlled by
+            the aliens. However, they gradually become more sophisticated.
+        </p>
+
+        <p>
+            They learn, communicate and develop emotions. They begin imitating
+            human behaviour and attempting to understand humanity.
+        </p>
+
+        <p>
+            Eventually, the Machines become capable of questioning their own
+            purpose.
+        </p>
+
+        <p>
+            The Androids were created to serve humanity, while the Machines
+            were created to destroy humanity's enemies. Yet both groups begin
+            developing the same emotions, desires and behaviours that once
+            belonged to humans.
+        </p>
+    </article>
+
+
+    <!-- PROJECT YORHA -->
+
+    <article class="lore-entry">
+        <h2>Project YoRHa</h2>
+
+        <p>
+            Eventually, the Androids create Project YoRHa.
+        </p>
+
+        <p>
+            YoRHa is designed to give Androids a renewed purpose and help them
+            fight the Machines. YoRHa soldiers are more advanced than ordinary
+            Androids and are organised into specialised combat units.
+        </p>
+
+        <p>
+            Two of the most famous YoRHa units are YoRHa No.2 Type B,
+            better known as 2B, and YoRHa No.9 Type S, better known as 9S.
+        </p>
+
+        <p>
+            YoRHa soldiers are told that humanity survives on the Moon and that
+            they are fighting to reclaim Earth for mankind.
+        </p>
+
+        <p>
+            However, the truth behind YoRHa is much darker. The entire system
+            is built around maintaining the Androids' belief that humanity
+            still exists.
+        </p>
+    </article>
+
+
+    <!-- 14TH MACHINE WAR -->
+
+    <article class="lore-entry">
+        <h2>The 14th Machine War</h2>
+
+        <p>
+            NieR:Automata takes place during the 14th Machine War.
+        </p>
+
+        <p>
+            2B and 9S are sent to Earth as YoRHa soldiers to investigate the
+            Machines and support the resistance.
+        </p>
+
+        <p>
+            Earth is now a massive collection of abandoned cities, forests,
+            deserts and ruins. Human civilisation has disappeared completely,
+            but traces of it remain everywhere.
+        </p>
+
+        <p>
+            The Androids encounter Machines that behave strangely. Some Machines
+            imitate humans, form families, attempt to understand religion,
+            or recreate human art and social structures.
+        </p>
+
+        <p>
+            The longer 2B and 9S remain on Earth, the more difficult it becomes
+            to view the Machines as simple enemies.
+        </p>
+    </article>
+
+
+    <!-- ADAM AND EVE -->
+
+    <article class="lore-entry">
+        <h2>Adam and Eve</h2>
+
+        <p>
+            Eventually, the Machine network produces two highly advanced beings
+            known as Adam and Eve.
+        </p>
+
+        <p>
+            Adam and Eve are humanoid Machines created from the Machine network.
+            They become fascinated with humanity, particularly human concepts
+            such as death, violence, knowledge and relationships.
+        </p>
+
+        <p>
+            Adam becomes obsessed with understanding human nature, while Eve
+            becomes deeply attached to Adam.
+        </p>
+
+        <p>
+            Their relationship becomes one of the most important Machine
+            relationships in the story.
+        </p>
+    </article>
+
+
+    <!-- 2B AND 9S -->
+
+    <article class="lore-entry">
+        <h2>2B and 9S</h2>
+
+        <p>
+            As 2B and 9S continue their missions, they develop a close
+            relationship.
+        </p>
+
+        <p>
+            9S is curious and constantly attempts to understand the world around
+            him. 2B is more emotionally restrained and focused on completing
+            her missions.
+        </p>
+
+        <p>
+            However, 2B hides a major secret. She is actually an executioner
+            model whose purpose is to eliminate 9S whenever he discovers
+            forbidden information.
+        </p>
+
+        <p>
+            9S repeatedly discovers information about humanity and YoRHa.
+            Whenever this happens, 2B is ordered to kill him and his memories
+            are restored into a new body.
+        </p>
+
+        <p>
+            This cycle has happened repeatedly, meaning 2B knows that eventually
+            she may have to kill 9S again.
+        </p>
+    </article>
+
+
+    <!-- ADAM AND EVE'S DEATH -->
+
+    <article class="lore-entry">
+        <h2>The Death of Adam and Eve</h2>
+
+        <p>
+            The conflict with Adam and Eve eventually reaches a climax.
+            Adam is killed by 2B and 9S.
+        </p>
+
+        <p>
+            Eve becomes overwhelmed by grief and rage. He connects himself to
+            the Machine network and becomes corrupted, forcing 2B and 9S to
+            fight him.
+        </p>
+
+        <p>
+            9S eventually kills Eve, but the experience has a major emotional
+            impact on him.
+        </p>
+    </article>
+
+
+    <!-- TRUTH ABOUT YORHA -->
+
+    <article class="lore-entry">
+        <h2>The Truth About YoRHa</h2>
+
+        <p>
+            The YoRHa Bunker is eventually attacked by the Machine network.
+            The attack exposes a horrifying secret.
+        </p>
+
+        <p>
+            YoRHa was not simply fighting for humanity. Its entire system was
+            designed around maintaining the belief that humanity still existed.
+        </p>
+
+        <p>
+            Humanity is already extinct.
+        </p>
+
+        <p>
+            The Androids are fighting for an ideal rather than an actual
+            population. The revelation destroys the foundation of YoRHa's
+            purpose.
+        </p>
+    </article>
+
+
+    <!-- 2B'S DEATH -->
+
+    <article class="lore-entry">
+        <h2>The Logic Virus</h2>
+
+        <p>
+            The Machine network eventually develops a method of infecting
+            Androids with a logic virus.
+        </p>
+
+        <p>
+            2B is eventually infected. 9S attempts to save her, but her
+            condition deteriorates.
+        </p>
+
+        <p>
+            2B asks 9S to kill her before the virus completely takes control.
+            9S is forced to kill her.
+        </p>
+
+        <p>
+            Her death becomes one of the most devastating moments of the story
+            and causes 9S to become increasingly consumed by grief and anger.
+        </p>
+    </article>
+
+
+    <!-- A2 -->
+
+    <article class="lore-entry">
+        <h2>A2</h2>
+
+        <p>
+            Another YoRHa unit, A2, becomes central to the final part of the
+            story.
+        </p>
+
+        <p>
+            A2 is a prototype YoRHa model who was abandoned after the Pearl
+            Harbor Descent. She is considered a traitor by YoRHa, although
+            the truth is much more complicated.
+        </p>
+
+        <p>
+            A2 eventually meets 9S after 2B's death. The two become connected
+            by 2B's final wishes and the collapse of YoRHa.
+        </p>
+    </article>
+
+
+    <!-- 9S -->
+
+    <article class="lore-entry">
+        <h2>9S's Collapse</h2>
+
+        <p>
+            After 2B's death, 9S becomes increasingly obsessed with revenge.
+        </p>
+
+        <p>
+            He begins digging deeper into the Machine network and discovers
+            even more horrifying truths.
+        </p>
+
+        <p>
+            The Machines have developed their own forms of life, society and
+            consciousness.
+        </p>
+
+        <p>
+            9S becomes increasingly unstable as he searches for answers.
+            Eventually, he begins fighting Machines without caring about
+            their motives or identities.
+        </p>
+    </article>
+
+
+    <!-- THE TOWER -->
+
+    <article class="lore-entry">
+        <h2>The Tower</h2>
+
+        <p>
+            The final conflict leads to the mysterious Tower.
+        </p>
+
+        <p>
+            The Tower is connected to the Machine network and contains enormous
+            amounts of data.
+        </p>
+
+        <p>
+            9S, A2 and the remaining Androids eventually become involved in
+            the final battle surrounding it.
+        </p>
+
+        <p>
+            A2 eventually fights 9S in the game's final confrontation.
+            Their battle represents the collapse of the old world and the
+            end of YoRHa.
+        </p>
+    </article>
+
+
+    <!-- ENDING E -->
+
+    <article class="lore-entry">
+        <h2>Ending E — A New Beginning</h2>
+
+        <p>
+            After the events of the final battle, the Pods refuse to accept
+            the destruction of 2B, 9S and A2.
+        </p>
+
+        <p>
+            The Pods reconstruct their data and attempt to restore the three
+            characters. The process is uncertain, but there is now a possibility
+            that they may continue living.
+        </p>
+
+        <p>
+            Ending E ultimately leaves their future uncertain, but hopeful.
+            Unlike many previous stories in the NieR universe, the conclusion
+            does not simply end with destruction.
+        </p>
+
+        <p>
+            Instead, it suggests that even after countless cycles of suffering,
+            there may still be the possibility of rebuilding.
+        </p>
+    </article>
+
+
+    <!-- CONCLUSION -->
+
+    <article class="lore-entry lore-ending">
+        <h2>The Story of NieR</h2>
+
+        <p>
+            The entire history of NieR can be viewed as a chain of consequences.
+            A supernatural event from another world creates the conditions for
+            humanity's destruction. Humanity attempts to survive through Project
+            Gestalt, which creates the Replicants and eventually leads to the
+            events of NieR Replicant.
+        </p>
+
+        <p>
+            Thousands of years later, Androids continue fighting in humanity's
+            name while Machines develop their own identities and emotions.
+            Project YoRHa creates another layer of lies to give the Androids
+            purpose, eventually leading to the events of NieR:Automata.
+        </p>
+
+        <p>
+            The story repeatedly asks what happens when beings created for a
+            specific purpose develop their own identities, emotions and desires.
+        </p>
+
+        <p>
+            From Caim and Angelus, to NieR, Kainé and Emil, and finally to 2B,
+            9S and A2, the world of NieR repeatedly explores the ideas of
+            identity, humanity, suffering, purpose and free will.
+        </p>
+
+    </article>
+
+</section>
+    </div>
+    <footer class="nier-footer">
+
+      <div class="pattern">
+      <div class="container">
+        <div class="pattern-inner"></div>
+      </div>
+    </div>
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <h2>NieR ARCHIVE</h2>
+            <p>
+                An unofficial fan project dedicated to the
+                NieR universe.
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <p>DATA ARCHIVE</p>
+            <p>ACCESSING MEMORY...</p>
+            <p class="footer-status">● SYSTEM ONLINE</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>© 2026 NIE[R] ARCHIVE</span>
+
+        <span>PROJECT YoRHa // ARCHIVE No. 01</span>
+
+
+    </div>
+
+</footer>
+```
+
+      
+
+    <div class="pattern">
+      <div class="container">
+        <div class="pattern-inner"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+      document.querySelectorAll('.music-button').forEach(function(button) {
+        button.addEventListener('click', function() {
+          const song = document.getElementById(button.dataset.song);
+          document.querySelectorAll('.music-button').forEach(function(otherButton) {
+            const otherSong = document.getElementById(otherButton.dataset.song);
+            if (otherSong !== song) otherSong.pause();
+          });
+          song.play();
+        });
+      });
+
+      document.querySelectorAll('.track-play-pause').forEach(function(control) {
+        control.addEventListener('click', function(event) {
+          event.stopPropagation();
+          const track = control.closest('.music-button');
+          const song = document.getElementById(track.dataset.song);
+
+          document.querySelectorAll('.music-button').forEach(function(otherTrack) {
+            const otherSong = document.getElementById(otherTrack.dataset.song);
+            if (otherSong !== song) otherSong.pause();
+          });
+
+          if (song.paused) song.play();
+          else song.pause();
+        });
+
+        const song = document.getElementById(control.closest('.music-button').dataset.song);
+        song.addEventListener('play', function() {
+          control.textContent = '❚❚';
+          control.setAttribute('aria-label', 'Pause song');
+        });
+        song.addEventListener('pause', function() {
+          control.textContent = '▶';
+          control.setAttribute('aria-label', 'Play song');
+        });
+      });
+  </script>
+</html>
